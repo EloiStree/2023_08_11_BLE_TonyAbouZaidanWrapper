@@ -1,0 +1,17 @@
+{
+    "name": "be.eloistree.abstractbleonstore",
+    "rootNamespace": "",
+    "references": [
+        "UnityEngine.UI",
+        "com.assetstore.bluetoothapi"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
