@@ -123,7 +123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7480375653157875894
 Transform:
   m_ObjectHideFlags: 0
@@ -151,7 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb760ce2b8987724eb79c69564ce2c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_valueToPush: al. 100> al' ;
+  m_valueToPush: 'a. 100> a'' ;
+
+'
   m_onPush:
     m_PersistentCalls:
       m_Calls:
@@ -307,7 +309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_aliasName: Left
   m_macAddress: 98:D3:11:F8:1C:A1
-  m_textToSend: a. 100> a' ;
+  m_textToSend: 'a. 100> a'' ;
+
+'
   m_onMessagePushed:
     m_PersistentCalls:
       m_Calls:
@@ -414,7 +418,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7480375654855986609}
   - component: {fileID: 7480375654855986614}
-  - component: {fileID: 7480375654855986615}
+  - component: {fileID: 5161113994077702098}
+  - component: {fileID: 6169629790977254872}
+  - component: {fileID: 7950123878401244036}
   m_Layer: 0
   m_Name: Bluetooth Manager
   m_TagString: Untagged
@@ -436,7 +442,7 @@ Transform:
   m_Children:
   - {fileID: 7687127506874404164}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7480375654855986614
 MonoBehaviour:
@@ -452,8 +458,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_autoCreate: 1
   m_debugList: []
-  m_useAuthorizedRequest: 0
---- !u!114 &7480375654855986615
+  m_useAuthorizedRequest: 1
+  m_useExceptionLog: 0
+--- !u!114 &5161113994077702098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,10 +469,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 7480375654855986612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96aa0146c6a7c1a47b56eeb5461cd585, type: 3}
+  m_Script: {fileID: 11500000, guid: e9fcda2da11e62447b1b21253172041b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_devicePaired: []
+--- !u!114 &6169629790977254872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480375654855986612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff57391a89e41864e8e8eb6659b5b584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_startTime: 0
+  m_repeatTime: 10
+  m_tick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5161113994077702098}
+        m_TargetAssemblyTypeName: BLDeviceListMono, be.eloistree.abstractbleonstore
+        m_MethodName: RefreshListOfPairedDevice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_countDown: 0
+--- !u!114 &7950123878401244036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480375654855986612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f13208b0bf5df4ba9c8f4b78c522dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_groupOfIdToListObject:
+    m_registeredIdToList: []
+  m_ignoreCase: 1
 --- !u!1 &7661348948964600718
 GameObject:
   m_ObjectHideFlags: 0
